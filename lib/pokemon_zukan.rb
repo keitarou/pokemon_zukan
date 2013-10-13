@@ -5,15 +5,20 @@ class PokemonZukan
 
   DATA_DIR = File.dirname(__FILE__) + '/../data'
 
-  def self.find(no, series="xy")
+  attr_reader :no, :name
+
+  def initialize(data={})
+    @no = data["no"]
+    @name = data["name"]
+  end
+
+  def self.find(no="", series="xy")
+
     file = File.open("#{DATA_DIR}/#{series}/#{no}.json")
     json = JSON.parser.new(file.read())
     file.close
 
     hash = json.parse()
-    self.no = hash["no"]
-    self.name = hash["name"]
-
-    return self
+    return PokemonZukan.new(hash)
   end
 end
