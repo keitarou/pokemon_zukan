@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'json'
 
-class ImageSearch
+class PokemonZukan
 
   DATA_DIR = File.dirname(__FILE__) + '/../data'
 
