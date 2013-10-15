@@ -5,11 +5,13 @@ class PokemonZukan
 
   DATA_DIR = File.dirname(__FILE__) + '/../data'
 
-  attr_reader :no, :name
+  attr_reader :no, :name, :type, :bunrui
 
   def initialize(data={})
     @no = data["no"]
     @name = data["name"]
+    @type = data["type"]
+    @bunrui = data["bunrui"]
   end
 
   def self.find(no="", series="xy")
