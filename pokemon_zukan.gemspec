@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "pokemon_zukan"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["keitarou.oonishi"]
-  s.date = "2013-10-13"
+  s.date = "2013-10-15"
   s.email = "keitarou.oonishi@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -742,6 +742,7 @@ Gem::Specification.new do |s|
     "data/xy/717.json",
     "data/xy/718.json",
     "lib/pokemon_zukan.rb",
+    "pokemon_zukan.gemspec",
     "test/helper.rb",
     "test/test_pokemon_zukan.rb"
   ]
