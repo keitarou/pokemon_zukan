@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "pokemon_zukan"
-  s.version = "0.0.2"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["keitarou.oonishi"]
@@ -741,6 +741,7 @@ Gem::Specification.new do |s|
     "data/xy/716.json",
     "data/xy/717.json",
     "data/xy/718.json",
+    "data/xy/name_table.json",
     "lib/pokemon_zukan.rb",
     "pokemon_zukan.gemspec",
     "test/helper.rb",
