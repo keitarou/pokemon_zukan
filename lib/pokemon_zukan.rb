@@ -15,7 +15,7 @@ class PokemonZukan
   end
 
   def self.find(no="", series="xy")
-    no = format("%03d", no)
+    no = format("%03d", no.to_i)
     file = File.open("#{DATA_DIR}/#{series}/#{no}.json")
     json = JSON.parser.new(file.read())
     file.close
@@ -37,7 +37,23 @@ class PokemonZukan
     json = JSON.parser.new(file.read())
     file.close
 
-    hash = JSON.parse(json)
+    hash = json.parse()
     return self.find(hash[name], series)
+  end
+
+  def self.find_all_by_name(names=[], series="xy")
+    retData = []
+    names.each do |name|
+      retData.push self.find_by_name(name, series)
+    end
+    return retData
+  end
+
+  def next(series="xy")
+    PokemonZukan::find(@no.to_i+1, series)
+  end
+
+  def prev(series="xy")
+    PokemonZukan::find(@no.to_i-1, series)
   end
 end
