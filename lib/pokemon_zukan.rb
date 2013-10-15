@@ -31,4 +31,13 @@ class PokemonZukan
     end
     return retData
   end
+
+  def self.find_by_name(name="", series="xy")
+    file = File.open("#{DATA_DIR}/#{series}/name_table.json")
+    json = JSON.parser.new(file.read())
+    file.close
+
+    hash = JSON.parse(json)
+    return self.find(hash[name], series)
+  end
 end
