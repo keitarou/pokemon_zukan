@@ -16,8 +16,11 @@
  @name
  
  0.1.0からサポート
- @bunrui
  @type
+
+ 0.3.1からサポート
+ @classification
+ @tribeValue
 
 == Methods
 
