@@ -5,13 +5,13 @@ class PokemonZukan
 
   DATA_DIR = File.dirname(__FILE__) + '/../data'
 
-  attr_reader :no, :name, :type, :bunrui, :tribeValue
+  attr_reader :no, :name, :type, :classification, :tribeValue
 
   def initialize(data={})
     @no = data["no"]
     @name = data["name"]
     @type = data["type"]
-    @bunrui = data["bunrui"]
+    @classification = data["classification"]
     @tribeValue = data["tribeValue"]
   end
 
