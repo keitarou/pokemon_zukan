@@ -58,6 +58,14 @@ class PokemonZukan
     return self.find_all(hash[type], series)
   end
 
+  def self.find_all_by_type(types=[], series="xy")
+    retData = []
+    types.each do |type|
+      retData.push self.find_by_type(type, series)
+    end
+    return retData
+  end
+
   def next(series="xy")
     PokemonZukan::find(@no.to_i+1, series)
   end
