@@ -49,6 +49,15 @@ class PokemonZukan
     return retData
   end
 
+  def self.find_by_type(type="", series="xy")
+    file = File.open("#{DATA_DIR}/#{series}/type_table.json")
+    json = JSON.parser.new(file.read())
+    file.close
+
+    hash = json.parse()
+    return self.find_all(hash[type], series)
+  end
+
   def next(series="xy")
     PokemonZukan::find(@no.to_i+1, series)
   end
