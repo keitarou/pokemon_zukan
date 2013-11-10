@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "pokemon_zukan"
-  s.version = "0.3.1"
+  s.version = "0.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["keitarou.oonishi"]
-  s.date = "2013-10-30"
+  s.date = "2013-11-10"
   s.email = "keitarou.oonishi@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
