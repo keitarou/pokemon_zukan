@@ -1,6 +1,24 @@
 # coding: utf-8
 require 'json'
 
+class Numeric
+  def to_pokemon
+    PokemonZukan::find self
+  end
+end
+
+class String
+  def to_pokemon
+    PokemonZukan::find_by_name self
+  end
+end
+
+class Array
+  def to_pokemon
+    self.map{|value| value.to_pokemon}
+  end
+end
+
 class PokemonZukan
 
   DATA_DIR = File.dirname(__FILE__) + '/../data'
@@ -8,13 +26,13 @@ class PokemonZukan
   attr_reader :no, :name, :type, :classification, :tribeValue, :height, :weight
 
   def initialize(data={})
-    @no = data["no"]
-    @name = data["name"]
-    @type = data["type"]
+    @no             = data["no"]
+    @name           = data["name"]
+    @type           = data["type"]
     @classification = data["classification"]
-    @tribeValue = data["tribeValue"]
-    @height = data["height"]
-    @weight = data["weight"]
+    @tribeValue     = data["tribeValue"]
+    @height         = data["height"]
+    @weight         = data["weight"]
   end
 
   def self.find(no="", series="xy")
@@ -24,15 +42,11 @@ class PokemonZukan
     file.close
 
     hash = json.parse()
-    return PokemonZukan.new(hash)
+    PokemonZukan.new(hash)
   end
 
   def self.find_all(nos=[], series="xy")
-    retData = []
-    nos.each do |no|
-      retData.push self.find(no, series)
-    end
-    return retData
+    nos.map{|no| PokemonZukan::find(no, series)}
   end
 
   def self.find_by_name(name="", series="xy")
@@ -41,15 +55,11 @@ class PokemonZukan
     file.close
 
     hash = json.parse()
-    return self.find(hash[name], series)
+    PokemonZukan::find(hash[name], series)
   end
 
   def self.find_all_by_name(names=[], series="xy")
-    retData = []
-    names.each do |name|
-      retData.push self.find_by_name(name, series)
-    end
-    return retData
+    names.map{|name| PokemonZukan::find_by_name(name, series)}
   end
 
   def self.find_by_type(type="", series="xy")
@@ -58,15 +68,11 @@ class PokemonZukan
     file.close
 
     hash = json.parse()
-    return self.find_all(hash[type], series)
+    PokemonZukan::find_all(hash[type], series)
   end
 
   def self.find_all_by_type(types=[], series="xy")
-    retData = []
-    types.each do |type|
-      retData.push self.find_by_type(type, series)
-    end
-    return retData
+    types.map{|type| PokemonZukan::find_by_type(type, series)}
   end
 
   def next(series="xy")
