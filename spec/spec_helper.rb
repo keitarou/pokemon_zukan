@@ -1,0 +1,1 @@
+require 'pokemon_zukan'
