@@ -5,4 +5,4 @@ rvm:
   - 2.1.0
 script: bundle exec rspec spec
 notifications:
-  hipchat: e68cce5c067c29e3f112cd6bf1386e@develop
+  hipchat: 06a5be661648098d9baa4232bf43ff@development
