@@ -126,5 +126,4 @@ describe PokemonZukan, "open class methods" do
   it "should be 'ゴリチュウ'.to_pokemon is nobody" do
     expect{ 'ゴリチュウ'.to_pokemon }.to raise_error
   end
-
 end
