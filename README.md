@@ -38,4 +38,3 @@
 ## Copyright
 
 Copyright (c) 2013 keitarou.oonishi. See LICENSE.txt for
-hook test

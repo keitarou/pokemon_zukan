@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe PokemonZukan, "find method" do
   it "should be find 1 is 001" do
-    PokemonZukan::find(1).no.should == '001'
+    PokemonZukan::find(1).no.should == '002'
   end
 
   it "should be find 001 is 001" do
