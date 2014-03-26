@@ -22,6 +22,7 @@ end
 class PokemonZukan
 
   DATA_DIR = File.dirname(__FILE__) + '/../data'
+  LANGUAGE = 'ja'
 
   attr_reader :no, :name, :type, :classification, :tribeValue, :height, :weight
 
@@ -37,7 +38,7 @@ class PokemonZukan
 
   def self.find(no="", series="xy")
     no = format("%03d", no.to_i)
-    file = File.open("#{DATA_DIR}/#{series}/#{no}.json")
+    file = File.open("#{DATA_DIR}/#{series}/#{LANGUAGE}/#{no}.json")
     json = JSON.parser.new(file.read())
     file.close
 
@@ -50,7 +51,7 @@ class PokemonZukan
   end
 
   def self.find_by_name(name="", series="xy")
-    file = File.open("#{DATA_DIR}/#{series}/name_table.json")
+    file = File.open("#{DATA_DIR}/#{series}/#{LANGUAGE}/name_table.json")
     json = JSON.parser.new(file.read())
     file.close
 
@@ -63,7 +64,7 @@ class PokemonZukan
   end
 
   def self.find_by_type(type="", series="xy")
-    file = File.open("#{DATA_DIR}/#{series}/type_table.json")
+    file = File.open("#{DATA_DIR}/#{series}/#{LANGUAGE}/type_table.json")
     json = JSON.parser.new(file.read())
     file.close
 
