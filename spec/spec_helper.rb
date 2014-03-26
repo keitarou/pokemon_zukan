@@ -1,4 +1,9 @@
-require 'coveralls'
-require 'pokemon_zukan'
+require 'simplecov'
+SimpleCov.start
 
+require 'coveralls'
 Coveralls.wear!
+
+
+
+require 'pokemon_zukan'
