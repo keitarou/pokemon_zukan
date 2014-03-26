@@ -16,9 +16,9 @@ describe PokemonZukan, "find method" do
     pokemons.last.no.should  == '002'
   end
 
-  it "should be find_all [1, 719] is 719 is nobody" do
+  it "should be find_all [1, 720] is 720 is nobody" do
     expect{
-      PokemonZukan::find_all([1, '719'])
+      PokemonZukan::find_all([1, '720'])
     }.to raise_error
   end
 
@@ -90,8 +90,8 @@ describe PokemonZukan, "pokemon is hushigidane" do
     }.to raise_error
   end
 
-  it "should be pokemon count is 718" do
-    717.times do
+  it "should be pokemon count is 719" do
+    718.times do
       @pokemon = @pokemon.next
     end
     expect{
@@ -119,8 +119,8 @@ describe PokemonZukan, "open class methods" do
     (@pokemon2.name == @pokemons.last.name) .should be_true
   end
 
-  it "should be 719.to_pokemon is nobody" do
-    expect{ 719.to_pokemon }.to raise_error
+  it "should be 720.to_pokemon is nobody" do
+    expect{ 720.to_pokemon }.to raise_error
   end
 
   it "should be 'ゴリチュウ'.to_pokemon is nobody" do
