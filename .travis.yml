@@ -7,4 +7,4 @@ script: bundle exec rspec spec
 notifications:
   hipchat:
     rooms:
-      secure: 1HvcYGwF18Yaa/MuwuJngf0jN/h0pIvKDeZDPrCneSuKMLgGn6j8ZsjknJsd6cf3ZWCDZee9+2dRDspY5jhV7F3WMxLjBIFp38d8PoJywUUxVhMG5z3Z9DrAAa/1bCNDAHXoK1PU6MI8G1IEkJH+CQoHPlp2SFTu9Csbzm/1P/k=
+      secure: yBwhX5j87QTG4nKTkJ8j9pIETegsnu7CZL4Tjzas98+cu8WQa1Xafqhf8LZFLoDCwGI5R4N5LreSQM3tWY0nsu0gj+/Zl8/6PvvaJvwslxDSMtTxqe/+Hr+ndTytmKrI2qFZgliNPi9hbWoXVSfFw35H3RalDU9oqoG7l/xeTTQ=
