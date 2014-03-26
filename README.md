@@ -1,6 +1,7 @@
 # pokemon_zukan
 
 [![Build Status](https://travis-ci.org/keitarou/pokemon_zukan.svg?branch=master)](https://travis-ci.org/keitarou/pokemon_zukan)
+[![Coverage Status](https://coveralls.io/repos/keitarou/pokemon_zukan/badge.png?branch=origin%2Fdevelop)](https://coveralls.io/r/keitarou/pokemon_zukan?branch=origin%2Fdevelop)
 
 ポケモン図鑑のgemです。
 ポケモンXYの全国図鑑に対応しています
